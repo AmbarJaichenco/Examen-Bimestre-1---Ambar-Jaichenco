@@ -17,28 +17,30 @@ public class EJ1 : MonoBehaviour
             Debug.Log("El monto minimmo es $1000");
         }
 
+
         else
         {
             if (moneda == "d" || moneda == "D")
             {
-                montoconver = monto * 112;
+                montoconver = monto / 112;
                 monedaelegida = "Dolares";
             }
 
-            if(moneda == "e" || moneda == "E")
+            else if(moneda == "e" || moneda == "E")
             {
-                montoconver = monto * 122;
+                montoconver = monto / 122;
                 monedaelegida = "Euros";
             }
             
-            if (moneda == "r" || moneda == "R")
+            else if  (moneda == "r" || moneda == "R")
             {
-                montoconver = monto * 23;
+                montoconver = monto / 23;
                 monedaelegida = "Reales";
             }
-            
-            else{
-                Debug.Log("Ingresa una letra valida: D para convertir a Dolares, R para convertir Reales y E para convertir a Euros");
+
+            else 
+            {
+                Debug.Log("Opción de moneda extranjera no válida");
             }
         }
 
